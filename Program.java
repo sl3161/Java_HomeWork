@@ -9,7 +9,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Scanner;
-import java.util.Set;
 
 // Подумать над структурой класса Ноутбук для магазина техники - выделить поля и методы. Реализовать в java.
 // Создать множество ноутбуков.
@@ -35,7 +34,7 @@ public class Program {
     
             while (true) {
             Scanner scanner = new Scanner(System.in);
-            System.out.println("Введите необходимую цыфру меню или Q для выхода:"+"\n"+" 1 - Добавление записи "+"\n"+" 2 - Вывод списка "); 
+            System.out.println("Введите необходимую цыфру меню или q для выхода:"+"\n"+" 1 - Добавление записи "+"\n"+" 2 - Вывод списка "); 
             System.out.println(" 3 - Поиск");       
                 switch (scanner.nextLine()) {
                     case "1":
@@ -50,8 +49,10 @@ public class Program {
                         break;
                         case "3":
                         Find();
+                        break;
                         default:
-                        return;
+                        System.out.println("Вы ввели неверный символ для выбора , введите заново");
+                        break;
                     }
                 
                 }  
@@ -92,7 +93,7 @@ public class Program {
         notes = GetArrayList();
         boolean flag2 = false;
         while (flag ==true) {
-            System.out.println("Введите параметры поиска и f для поиска по выбраным критериям, q для выхода :"); 
+            System.out.println("Введите параметры поиска или f для завершения ввода критериев поиска и поиска по выбраным критериям :"); 
             System.out.println("1 - название"); 
             System.out.println("2 - ОС"); 
             System.out.println("3 - цвет"); 
